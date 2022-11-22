@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
-  final double days = 50.47;
+  final double days = 50.547;
   final String d = " hello wordld kem choo";
 
   @override
@@ -11,7 +11,6 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.black87,
         elevation: 5.0,
         title: const Text(
           'Token App',
@@ -40,9 +39,8 @@ class HomePage extends StatelessWidget {
               child: ListTile(
                 leading: FlutterLogo(size: 40.0),
                 title: Text('Two-line ListTile'),
-                subtitle: Text('Here is a second line'),             
+                subtitle: Text('Here is a second line'),
               ),
-              
             ),
           ],
         ),
