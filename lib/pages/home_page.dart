@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/drawer.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -19,32 +21,7 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Text("welcome s $d $days"),
       ),
-      drawer: Drawer(
-        backgroundColor: Colors.black,
-        child: ListView(
-          children: const <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.amber,
-              ),
-              child: Text("Drawer Header"),
-            ),
-            Card(
-              child: ListTile(
-                leading: FlutterLogo(),
-                title: Text('One-line with leading widget'),
-              ),
-            ),
-            Card(
-              child: ListTile(
-                leading: FlutterLogo(size: 40.0),
-                title: Text('Two-line ListTile'),
-                subtitle: Text('Here is a second line'),
-              ),
-            ),
-          ],
-        ),
-      ),
+      drawer: MyDrawer(),
     );
   }
 }
