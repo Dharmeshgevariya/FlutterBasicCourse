@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               children: [
                 Image.asset(
-                  "assets/image/P1.png", //image source undraw.com
+                  "assets/image/login.png", //image source undraw.co
                   height: 300.0,
                   fit: BoxFit.cover,
                 ),
@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
                       TextFormField(
                         decoration: InputDecoration(
                             hintText: "Enter Mobile Number",
-                            labelText: "MobileNumber"),
+                            labelText: "Mobile Number"),
                         onChanged: (value) {
                           name = value;
                           setState(() {});
