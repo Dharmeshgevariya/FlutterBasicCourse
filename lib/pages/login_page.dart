@@ -58,11 +58,11 @@ class _LoginPageState extends State<LoginPage> {
                         setState(() {
                           changeButton = true;
                         });
-                        await Future.delayed(Duration(milliseconds: 500));
+                        await Future.delayed(Duration(milliseconds: 700));
                         Navigator.pushNamed(context, MyRoutes.homeRoutes);
                       },
                       child: AnimatedContainer(
-                        duration: Duration(milliseconds: 500),
+                        duration: Duration(milliseconds: 700),
                         width: changeButton ? 50 : 420,
                         height: 50,
                         alignment: Alignment.center,
