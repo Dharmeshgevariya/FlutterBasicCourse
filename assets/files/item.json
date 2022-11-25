@@ -1,0 +1,90 @@
+{
+    "items":[
+        {
+            "id": 1001,
+            "name": "Kela  Wafers",
+            "cat": "snacks",
+            "comapny": "Balaji",
+            "price": 45,
+            "image":
+                "https://www.jiomart.com/images/product/original/490025530/balaji-mari-banana-wafers-30-g-product-images-o490025530-p490025530-0-202207271957.jpg",
+            "qty": 45,
+            "unit": "PCS"
+
+        },
+        {
+            "id": 1002,
+            "name": "Potato  Wafers",
+            "cat": "snacks",
+            "comapny": "Balaji",
+            "price": 40,
+            "image":
+                "https://www.balajiwafers.com/wp-content/uploads/2019/04/T_Wafers_SimplySalted_Middle.png",
+            "qty": 45,
+            "unit": "PCS"
+
+        },
+        {
+            "id": 1004,
+            "name": "Stack up",
+            "cat": "snacks",
+            "comapny": "Balaji",
+            "price": 90,
+            "image":
+                "https://www.balajiwafers.com/wp-content/uploads/2020/10/Stack-up-Sizzling-Chilli-210820.png",
+            "qty": 45,
+            "unit": "PCS"
+
+        },
+        {
+            "id": 1003,
+            "name": "Peri Peri  Wafers",
+            "cat": "snacks",
+            "comapny": "Balaji",
+            "price": 35,
+            "image":
+                "https://www.balajiwafers.com/wp-content/uploads/2020/08/Wafers-Peri-Peri-210820.png",
+            "qty": 45,
+            "unit": "PCS"
+
+        },
+        {
+            "id": 1005,
+            "name": "Gippi",
+            "cat": "snacks",
+            "comapny": "Balaji",
+            "price": 45,
+            "image":
+                "https://www.balajiwafers.com/wp-content/themes/custom/img/distri_img3.png",
+            "qty": 45,
+            "unit": "PCS"
+
+        },
+        {
+            "id": 1006,
+            "name": "Tomato Twist",
+            "cat": "snacks",
+            "comapny": "Balaji",
+            "price": 45,
+            "image":
+                "https://www.balajiwafers.com/wp-content/themes/custom/img/distri_img2.png",
+            "qty": 45,
+            "unit": "PCS"
+
+        },
+        {
+            "id": 1006,
+            "name": "Masal Masti",
+            "cat": "snacks",
+            "comapny": "Balaji",
+            "price": 65,
+            "image":
+                "https://www.balajiwafers.com/wp-content/uploads/2019/04/T_Wafers_MasalaMasti_Middle.png",
+            "qty": 45,
+            "unit": "PCS"
+
+        }
+
+
+    ]
+}
