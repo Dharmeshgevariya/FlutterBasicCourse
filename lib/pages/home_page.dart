@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catelog/models/productModel.dart';
 
+import '../widgets/ItemWidget.dart';
 import '../widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
@@ -10,6 +12,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // final dummylist = List.generate(10, (index) => ItemModel.items[index]);
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -18,15 +21,15 @@ class HomePage extends StatelessWidget {
           'Token App',
         ),
       ),
-      body: Container(
-        constraints: BoxConstraints(
-            minHeight: 70, maxHeight: 300, maxWidth: 300, minWidth: 70),
-        color: Colors.green,
-        child: Container(
-            height: 250,
-            width: 250,
-            color: Colors.red,
-            child: Text(context.runtimeType.toString())),
+      body: Padding(
+        padding: const EdgeInsets.all(5.0),
+        child: ListView.builder(
+            itemCount: ItemModel.items.length,
+            itemBuilder: (context, index) {
+              return ItemWidget(
+                item: ItemModel.items[index],
+              );
+            }),
       ),
       drawer: MyDrawer(),
     );
