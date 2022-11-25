@@ -1,3 +1,7 @@
+class ItemModel {
+  static List<Item> items = [];
+}
+
 class Item {
   final num id;
   final String name;
@@ -17,39 +21,26 @@ class Item {
       required this.image,
       required this.qty,
       required this.unit});
-}
 
-class ItemModel {
-  static final items = [
-    Item(
-        id: 1001,
-        name: "Kela  Wafers",
-        cat: "snacks",
-        comapny: "Balaji",
-        price: 45,
-        image:
-            "https://www.jiomart.com/images/product/original/490025530/balaji-mari-banana-wafers-30-g-product-images-o490025530-p490025530-0-202207271957.jpg",
-        qty: 45,
-        unit: "PCS"),
-    Item(
-        id: 1002,
-        name: "Potato  Wafers",
-        cat: "snacks",
-        comapny: "Balaji",
-        price: 50,
-        image:
-            "https://www.balajiwafers.com/wp-content/uploads/2019/04/T_Wafers_SimplySalted_Middle.png",
-        qty: 30,
-        unit: "PCS"),
-    Item(
-        id: 1002,
-        name: "Peri Peri  Wafers",
-        cat: "snacks",
-        comapny: "Balaji",
-        price: 30,
-        image:
-            "https://www.balajiwafers.com/wp-content/uploads/2020/08/Wafers-Peri-Peri-210820.png",
-        qty: 20,
-        unit: "PCS")
-  ];
+  factory Item.fromMap(Map<String, dynamic> map) {
+    return Item(
+        id: map["id"],
+        name: map["name"],
+        cat: map["cat"],
+        comapny: map["comapny"],
+        price: map["price"],
+        image: map["image"],
+        qty: map["qty"],
+        unit: map["unit"]);
+  }
+  toMap() => {
+        "id": id,
+        "name": name,
+        "cat": cat,
+        "comapny": comapny,
+        "price": price,
+        "image": image,
+        "qty": qty,
+        "unit": unit
+      };
 }

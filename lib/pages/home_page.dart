@@ -20,16 +20,18 @@ class _HomePageState extends State<HomePage> {
   final String d = " hello wordld kem choo";
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     loadData();
   }
 
   loadData() async {
+    await Future.delayed(Duration(seconds: 5));
     final itemjson = await rootBundle.loadString("assets/files/item.json");
     final decodeData = jsonDecode(itemjson);
     final itemsData = decodeData["items"];
-    print(itemsData);
+    ItemModel.items =
+        List.from(itemsData).map<Item>((item) => Item.fromMap(item)).toList();
+    setState(() {});
   }
 
   @override
@@ -45,13 +47,17 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(5.0),
-        child: ListView.builder(
-            itemCount: ItemModel.items.length,
-            itemBuilder: (context, index) {
-              return ItemWidget(
-                item: ItemModel.items[index],
-              );
-            }),
+        child: (ItemModel.items.isNotEmpty)
+            ? ListView.builder(
+                itemCount: ItemModel.items.length,
+                itemBuilder: (context, index) {
+                  return ItemWidget(
+                    item: ItemModel.items[index],
+                  );
+                })
+            : Center(
+                child: CircularProgressIndicator(),
+              ),
       ),
       drawer: MyDrawer(),
     );
