@@ -7,13 +7,19 @@ class Item {
   final num qty;
   final String unit;
 
-  Item(this.id, this.name, this.cat, this.price, this.image, this.qty,
-      this.unit);
+  Item(
+      {required this.id,
+      required this.name,
+      required this.cat,
+      required this.price,
+      required this.image,
+      required this.qty,
+      required this.unit});
 }
 
 final products = [
   Item(
-      id: "1002",
+      id: 1002,
       name: "Balaji Wafers",
       cat: "snakes",
       price: 45,
