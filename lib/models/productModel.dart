@@ -13,7 +13,7 @@ class Item {
 
 final products = [
   Item(
-      id: 00120,
+      id: "1002",
       name: "Balaji Wafers",
       cat: "snakes",
       price: 45,

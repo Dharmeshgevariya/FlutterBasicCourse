@@ -18,8 +18,15 @@ class HomePage extends StatelessWidget {
           'Token App',
         ),
       ),
-      body: Center(
-        child: Text("welcome s $d $days"),
+      body: Container(
+        constraints: BoxConstraints(
+            minHeight: 70, maxHeight: 300, maxWidth: 300, minWidth: 70),
+        color: Colors.green,
+        child: Container(
+            height: 250,
+            width: 250,
+            color: Colors.red,
+            child: Text(context.runtimeType.toString())),
       ),
       drawer: MyDrawer(),
     );
