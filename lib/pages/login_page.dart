@@ -39,6 +39,7 @@ class _LoginPageState extends State<LoginPage> {
                       decoration: InputDecoration(
                           hintText: "Enter Mobile Number",
                           labelText: "MobileNumber"),
+
                       onChanged: (value) {
                         name = value;
                         setState(() {});

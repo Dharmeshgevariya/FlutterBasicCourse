@@ -6,7 +6,7 @@ class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   final double days = 50.547;
-  final String d = " hello wordld kem choo";
+  final String d = " hello wordld kem मपपा";
 
   @override
   Widget build(BuildContext context) {
