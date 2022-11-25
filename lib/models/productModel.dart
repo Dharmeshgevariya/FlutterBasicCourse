@@ -19,12 +19,30 @@ class Item {
 
 final products = [
   Item(
-      id: 1002,
-      name: "Balaji Wafers",
-      cat: "snakes",
+      id: 1001,
+      name: "Kela  Wafers",
+      cat: "Balaji",
       price: 45,
       image:
-          "https://www.balajiwafers.com/wp-content/uploads/2019/04/T_Wafers_SimplySalted_Middle.png",
+          "https://www.jiomart.com/images/product/original/490025530/balaji-mari-banana-wafers-30-g-product-images-o490025530-p490025530-0-202207271957.jpg",
       qty: 45,
+      unit: "PCS"),
+  Item(
+      id: 1002,
+      name: "Potato  Wafers",
+      cat: "Balaji",
+      price: 50,
+      image:
+          "https://www.balajiwafers.com/wp-content/uploads/2019/04/T_Wafers_SimplySalted_Middle.png",
+      qty: 30,
+      unit: "PCS"),
+  Item(
+      id: 1002,
+      name: "Peri Peri  Wafers",
+      cat: "Balaji",
+      price: 30,
+      image:
+          "https://www.balajiwafers.com/wp-content/uploads/2020/08/Wafers-Peri-Peri-210820.png",
+      qty: 20,
       unit: "PCS")
 ];
