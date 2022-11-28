@@ -2,12 +2,12 @@
     "items":[
         {
             "id": 1001,
-            "name": "Kela  Wafers",
+            "name": "Cream & Onion Wafers",
             "cat": "snacks",
             "comapny": "Balaji",
             "price": 45,
             "image":
-                "https://www.jiomart.com/images/product/original/490025530/balaji-mari-banana-wafers-30-g-product-images-o490025530-p490025530-0-202207271957.jpg",
+                "https://www.jiomart.com/images/product/600x600/490868180/balaji-cream-onion-wafers-135-g-product-images-o490868180-p490868180-0-202203170717.jpg",
             "qty": 45,
             "unit": "PCS"
 

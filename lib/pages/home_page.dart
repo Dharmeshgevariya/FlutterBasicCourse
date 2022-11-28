@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_catelog/models/productModel.dart';
@@ -46,40 +47,100 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(5.0),
+        padding: const EdgeInsets.all(12),
         child: (ItemModel.items.isNotEmpty)
             ? GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 5,
-                  mainAxisSpacing: 5,
-                ),
+                shrinkWrap: true,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 5,
+                    mainAxisSpacing: 5,
+                    mainAxisExtent: 310.0),
                 itemBuilder: (context, index) {
                   final item = ItemModel.items[index];
-                  return Card(
-                      clipBehavior: Clip.antiAlias,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5)),
-                      child: GridTile(
-                        header: Container(
-                          child: Text(item.name,
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 15)),
-                          padding: const EdgeInsets.all(10),
-                          decoration:
-                              BoxDecoration(color: Colors.deepPurple[50]),
-                        ),
-                        child: Image.network(item.image),
-                        footer: Container(
-                          alignment: Alignment.bottomRight,
-                          child: Text(
-                            item.price.toString(),
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 17),
+                  return Container(
+                      decoration: BoxDecoration(
+                          // boxShadow: [
+                          //   BoxShadow(
+                          //     color: Colors.black26,
+                          //     offset: const Offset(
+                          //       2.0,
+                          //       2.0,
+                          //     ),
+                          //     blurRadius: 5.0,
+                          //     spreadRadius: 2.0,
+                          //   ), //BoxShadow
+                          //   BoxShadow(
+                          //     color: Colors.white,
+                          //     offset: const Offset(0.0, 0.0),
+                          //     blurRadius: 0.0,
+                          //     spreadRadius: 0.0,
+                          //   ),
+                          // ],
+                          borderRadius: BorderRadius.circular(12.0),
+                          color: Color.fromARGB(255, 237, 237, 237)),
+                      child: Column(children: [
+                        ClipRRect(
+                          borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(12),
+                              topRight: Radius.circular(12)),
+                          child: Image.network(
+                            item.image,
+                            height: 180,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
                           ),
-                          padding: const EdgeInsets.all(5),
                         ),
-                      ));
+                        Padding(
+                            padding: const EdgeInsets.all(2.0),
+                            child: Row(
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(item.name,
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .subtitle1!
+                                            .merge(const TextStyle(
+                                                fontWeight:
+                                                    FontWeight.normal))),
+                                    Text(item.comapny,
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .bodyText1!
+                                            .merge(const TextStyle(
+                                                fontWeight: FontWeight.normal,
+                                                color: Color.fromARGB(
+                                                    255, 173, 173, 173)))),
+                                    Column(
+                                      children: [
+                                        Text(item.price.toString(),
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodyText2!
+                                                .merge(const TextStyle(
+                                                  fontWeight: FontWeight.w700,
+                                                  color: Colors.green,
+                                                ))),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        IconButton(
+                                          onPressed: () {},
+                                          icon: Icon(CupertinoIcons.heart),
+                                        ),
+                                        IconButton(
+                                            onPressed: () {},
+                                            icon: Icon(CupertinoIcons.cart)),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ],
+                            )),
+                      ]));
                 },
                 itemCount: ItemModel.items.length,
               )
