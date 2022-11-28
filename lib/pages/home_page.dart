@@ -59,10 +59,12 @@ class _HomePageState extends State<HomePage> {
                   return Card(
                       clipBehavior: Clip.antiAlias,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
+                          borderRadius: BorderRadius.circular(5)),
                       child: GridTile(
                         header: Container(
-                          child: Text(item.name),
+                          child: Text(item.name,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 15)),
                           padding: const EdgeInsets.all(10),
                           decoration:
                               BoxDecoration(color: Colors.deepPurple[50]),
@@ -70,10 +72,12 @@ class _HomePageState extends State<HomePage> {
                         child: Image.network(item.image),
                         footer: Container(
                           alignment: Alignment.bottomRight,
-                          child: Text(item.price.toString()),
-                          padding: const EdgeInsets.all(10),
-                          decoration:
-                              BoxDecoration(color: Colors.deepPurple[50]),
+                          child: Text(
+                            item.price.toString(),
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 17),
+                          ),
+                          padding: const EdgeInsets.all(5),
                         ),
                       ));
                 },
