@@ -6,8 +6,8 @@ import 'package:flutter_catelog/blocs/internet_blocs/internet_event.dart';
 import 'package:flutter_catelog/blocs/internet_blocs/internet_state.dart';
 
 class InternetBloc extends Bloc<InternetEvent, InternetState> {
-  Connectivity _connectivity = Connectivity();
   StreamSubscription? connectivitySubscription;
+  Connectivity _connectivity = Connectivity();
 
   InternetBloc() : super(InternetInitialState()) {
     on<InternetLostEvent>((event, emit) => emit(InternetLostState()));
