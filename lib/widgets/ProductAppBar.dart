@@ -16,7 +16,7 @@ class ProductAppBar extends StatelessWidget {
           Icon(
             Icons.sort,
             size: 30,
-            color: Colors(0xFF4C53A5),
+            color: Color(0xFF4C53A5),
           ),
           Padding(
             padding: EdgeInsets.only(
