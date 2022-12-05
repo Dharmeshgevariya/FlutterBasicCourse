@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_catelog/models/productModel.dart';
 
-import '../widgets/ItemWidget.dart';
 import '../widgets/drawer.dart';
 
 class HomePage extends StatefulWidget {

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catelog/pages/Login/LoginBloC.dart';
+import 'package:flutter_catelog/pages/WelcomPage.dart';
 import 'package:flutter_catelog/pages/login_page.dart';
 import 'package:flutter_catelog/pages/product_page.dart';
 import 'package:flutter_catelog/utils/routs.dart';
 import 'package:flutter_catelog/widgets/themes.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'pages/home_page.dart';
 
 void main() {
@@ -19,13 +20,15 @@ class MyApp extends StatelessWidget {
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.DarkTheme(context),
       themeMode: ThemeMode.light,
-      initialRoute: MyRoutes.productRoutes,
+      initialRoute: MyRoutes.welcomeRoutes,
       debugShowCheckedModeBanner: false,
       routes: {
-        "/": (context) => ProductPage(),
+        "/": (context) => LoginBloC(),
         MyRoutes.homeRoutes: (context) => HomePage(),
         MyRoutes.loginRoutes: (context) => LoginPage(),
-        MyRoutes.productRoutes: (context) => ProductPage()
+        MyRoutes.productRoutes: (context) => ProductPage(),
+        MyRoutes.loginBloCRoutes: (context) => LoginBloC(),
+        MyRoutes.welcomeRoutes: (context) => WelcomPage(),
       },
     );
   }
